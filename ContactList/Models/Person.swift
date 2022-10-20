@@ -11,6 +11,10 @@ struct Person {
     let phone: String
     let email: String
     
+    var fullName: String {
+        "\(name) \(surname)"
+    }
+    
     static func retunPerson() -> [Person] {
         let dataStore = DataStore()
         return [

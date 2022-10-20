@@ -12,16 +12,13 @@ class DitailsViewController: UIViewController {
     @IBOutlet var phoneLabel: UILabel!
     @IBOutlet var emailLabel: UILabel!
     
-    var name: String!
-    var surname: String!
-    var phone: String!
-    var email: String!
+    var person: Person!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        phoneLabel.text = phone
-        emailLabel.text = email
-        title = "\(name ?? "") \(surname ?? "")"
+        phoneLabel.text = person.phone
+        emailLabel.text = person.email
+        title = person.fullName
     }
 
 
